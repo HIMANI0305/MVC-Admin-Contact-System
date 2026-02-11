@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Contacts";
+    Layout = "../Shared/_ContactLayout.cshtml";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <script>alert('@TempData["SuccessMessage"]');</script>
+}
+
+@using Repositories
+@model t_User
+
+<div class="card">
+    <div class="card-header">
+        <h3>My Profile</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img id="image" src="../../profile_images/@Model.c_Image" class="img-fluid rounded-circle" alt="Profile Image" />
+            </div>
+            <div class="col-md-8">
+                <dl class="row">
+                    <dt class="col-sm-3">Name:</dt>
+                    <dd class="col-sm-9" id="name">@Model.c_UserName</dd>
+                    <dt class="col-sm-3">Email:</dt>
+                    <dd class="col-sm-9" id="email">@Model.c_Email</dd>
+                    <dt class="col-sm-3">Mobile:</dt>
+                    <dd class="col-sm-9" id="mobile">@Model.c_Mobile</dd>
+                    <dt class="col-sm-3">Gender:</dt>
+                    <dd class="col-sm-9" id="gender">@Model.c_Gender</dd>
+                    <dt class="col-sm-3">Address:</dt>
+                    <dd class="col-sm-9" id="address">@Model.c_Address</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>

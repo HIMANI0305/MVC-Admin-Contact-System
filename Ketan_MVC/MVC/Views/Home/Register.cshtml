@@ -1,0 +1,62 @@
+@model Repositories.t_User
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+
+
+
+<form asp-action="Register" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="c_UserName"></label>
+        <input asp-for="c_UserName" class="form-control" />
+        <span asp-validation-for="c_UserName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="c_Email"></label>
+        <input asp-for="c_Email" type="email" class="form-control" />
+        <span asp-validation-for="c_Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="c_Password"></label>
+        <input asp-for="c_Password" type="password" class="form-control" />
+        <span asp-validation-for="c_Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="c_ConfirmPassword"></label>
+        <input asp-for="c_ConfirmPassword" type="password" class="form-control" />
+        <span asp-validation-for="c_ConfirmPassword" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="c_Address"></label>
+        <textarea asp-for="c_Address" class="form-control"></textarea>
+        <span asp-validation-for="c_Address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="c_Mobile"></label>
+        <input asp-for="c_Mobile" type="tel" class="form-control" />
+        <span asp-validation-for="c_Mobile" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="c_Gender"></label>
+        <select asp-for="c_Gender" class="form-control">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <span asp-validation-for="c_Gender" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ProfilePicture"></label>
+        <input asp-for="ProfilePicture" type="file" class="form-control" />
+        <span asp-validation-for="ProfilePicture" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
