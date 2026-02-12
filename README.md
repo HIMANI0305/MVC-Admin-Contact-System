@@ -14,7 +14,7 @@ A powerful, clean, and responsive web application built with ASP.NET Core 8.0 MV
 
 🐘 Database Persistence: Reliable data storage using PostgreSQL.
 
-🛠️ Technologies Used
+🛠️ Technologies Used 
 Layer,Technology
 Backend,ASP.NET Core 8.0 (MVC)
 Language,C#
@@ -23,19 +23,7 @@ Data Provider,Npgsql
 Frontend,"Bootstrap 5, jQuery, HTML5, CSS3"
 Architecture,Repository Pattern
 
-📂 Project Structure
-Ketan_MVC/
-├── DemoMVC.sln
-├── MVC/                          # Main Web Application Layer
-│   ├── Controllers/              # Auth & Contact CRUD Logic
-│   ├── Views/                    # Razor Templates (UI)
-│   ├── wwwroot/                  # Static files (CSS, JS, User Images)
-│   ├── appsettings.json          # Configuration & Connection Strings
-│   └── Program.cs                # Dependency Injection & App Middleware
-└── Repositories/                 # Data Access Layer
-    ├── Interfaces/               # Service Contracts
-    ├── Implementations/          # Concrete Logic for PostgreSQL
-    └── Models/                   # Database Entities & ViewModels
+
 
     
 🚀 Getting Started
