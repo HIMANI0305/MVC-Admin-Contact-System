@@ -2,6 +2,7 @@
 A powerful, clean, and responsive web application built with ASP.NET Core 8.0 MVC for managing personal and professional contacts. This project demonstrates modern software architecture using the Repository Pattern and PostgreSQL integration.
 
 ✨ Features
+
 🔐 User Authentication: Secure registration and login system with session-based management.
 
 📇 Contact Management: Complete CRUD (Create, Read, Update, Delete) functionality for your contact list.
